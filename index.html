@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Piano</title>
+</head>
+<body>
+    <section class="piano">
+        <header>
+            <h3>Wolf Piano</h3>
+            <div class="side">
+                <label for="volume">Volume</label>
+                <input id="volume" type="range" min="0" max="1" value="0.7" step="0.1" oninput="setVolume(event.target.value)"/>
+            </div>
+            <div class="side">
+                <label for="show-keys">Show keys</label>
+                <input type="checkbox" class="d-none" id="show-keys">
+                <button class="toggle" onclick="toggleKeys()">
+                    <div class="circle"></div>
+                </button>
+            </div>
+        </header>
+        <main>
+            <div class="piano-long-keys-container">
+                <!-- <div class="piano-long-key"><span>A</span></div>
+                <div class="piano-long-key"><span>S</span></div>
+                <div class="piano-long-key"><span>D</span></div>
+                <div class="piano-long-key"><span>F</span></div>
+                <div class="piano-long-key"><span>G</span></div>
+                <div class="piano-long-key"><span>H</span></div>
+                <div class="piano-long-key"><span>J</span></div>
+                <div class="piano-long-key"><span>K</span></div>
+                <div class="piano-long-key"><span>L</span></div>
+                <div class="piano-long-key"><span>;</span></div> -->
+            </div>
+            <div class="piano-short-keys-container">
+                <!-- <div class="piano-short-key"><span>W</span></div>
+                <div class="piano-short-key"><span>E</span></div>
+                <div class="piano-short-key"><span>T</span></div>
+                <div class="piano-short-key"><span>Y</span></div>
+                <div class="piano-short-key"><span>U</span></div>
+                <div class="piano-short-key"><span>O</span></div>
+                <div class="piano-short-key"><span>P</span></div> -->
+            </div>
+        </main>
+    </section>
+    <script defer src="./script.js"></script>
+</body>
+</html>

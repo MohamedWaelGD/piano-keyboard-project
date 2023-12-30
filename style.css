@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+:root {
+    --bg-color: rgb(126, 116, 150);
+    --piano-bg-color: rgb(34, 34, 34);
+    --text-color: rgb(219, 219, 219);
+    --text-hover-color: rgb(170, 170, 170);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--bg-color);
+}
+
+.d-none {
+    display: none;
+}
+
+.opacity-0 {
+    opacity: 0;
+}
+
+.piano {
+    padding: 2rem;
+    background-color: var(--piano-bg-color);
+    color: var(--text-color);
+    border-radius: 20px;
+}
+
+.piano header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 3rem;
+    margin-bottom: 40px;
+}
+
+.side {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.piano h3 {
+    font-size: 24px;
+}
+
+.toggle {
+    position: relative;
+    width: 80px;
+    height: 35px;
+    border: none;
+    outline: none;
+    background-color: rgb(80, 80, 80);
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+.toggle .circle {
+    width: 28px;
+    height: 28px;
+    position: absolute;
+    top: 3.5px;
+    left: 4px;
+    border-radius: 50%;
+    background-color: var(--text-color);
+    transition: left 200ms, right 200ms, background-color 200ms;
+}
+
+.toggle:hover .circle {
+    background-color: var(--text-hover-color);
+}
+
+.toggle .circle.active{
+    left: 48px;
+}
+
+main {
+    position: relative;
+}
+
+.piano-long-keys-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .2rem;
+}
+
+.piano-long-key {
+    position: relative;
+    cursor: pointer;
+    width: 80px;
+    height: 300px;
+    border-radius: 5px;
+    background: rgb(157,157,157);
+    background: linear-gradient(0deg, rgba(137,137,137,1) 0%, rgba(232,232,232,1) 12%, rgba(255,255,255,1) 100%);
+}
+
+.piano-long-key:hover {
+    background: linear-gradient(0deg, rgb(61, 61, 61) 0%, rgb(161, 161, 161) 12%, rgba(255,255,255,1) 100%);
+}
+
+.piano-long-key.active {
+    background: linear-gradient(0deg, rgb(61, 61, 61) 0%, rgb(161, 161, 161) 12%, rgba(255,255,255,1) 100%);
+}
+
+.piano-long-key span {
+    position: absolute;
+    color: rgb(97, 97, 97);
+    font-size: 25px;
+    bottom: 20px;
+    left: 50%;
+    transform: translate(-50%);
+    transition: opacity 200ms;
+}
+
+.piano-short-keys-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.piano-short-key {
+    position: absolute;
+    cursor: pointer;
+    width: 50px;
+    height: 170px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    background: rgb(157,157,157);
+    background: linear-gradient(0deg, rgb(29, 29, 29) 0%, rgb(51, 51, 51) 12%, rgb(41, 41, 41) 100%);
+}
+
+.piano-short-key:hover {
+    background: linear-gradient(0deg, rgb(29, 29, 29) 0%, rgb(31, 31, 31) 12%, rgb(41, 41, 41) 100%);
+}
+
+.piano-short-key.active {
+    background: linear-gradient(0deg, rgb(29, 29, 29) 0%, rgb(31, 31, 31) 12%, rgb(41, 41, 41) 100%);
+}
+
+.piano-short-key span {
+    position: absolute;
+    color: rgb(143, 143, 143);
+    font-size: 25px;
+    bottom: 20px;
+    left: 50%;
+    transform: translate(-50%);
+    transition: opacity 200ms;
+}
+
+.piano-short-key:nth-child(1) {
+    left: 57px;
+}
+
+.piano-short-key:nth-child(2) {
+    left: 140px;
+}
+
+.piano-short-key:nth-child(3) {
+    left: 307px;
+}
+
+.piano-short-key:nth-child(4) {
+    left: 390px;
+}
+
+.piano-short-key:nth-child(5) {
+    left: 472px;
+}
+
+.piano-short-key:nth-child(6) {
+    left: 638px;
+}
+
+.piano-short-key:nth-child(7) {
+    left: 722px;
+}
